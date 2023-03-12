@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap Thumbnail Carousel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	background: #ebebeb;
+}
+h2 {
+	color: #696969;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	position: relative;
+	margin: 40px 70px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+h2::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	height: 1px;
+	border-radius: 1px;
+	background: #d4d4d4;
+	left: 0;
+	right: 0;
+	bottom: 14px;
+}
+h2 span {
+	display: inline-block;
+	padding: 0 25px;
+	background:#ebebeb;
+	position:relative;
+	z-index:2;
+}
+.carousel {	
+	margin: 0 auto;
+	padding: 0 68px;
+}
+.carousel .carousel-item {
+	text-align: center;
+	overflow: hidden;
+	height: 160px;
+}
+.carousel .carousel-item .img-box {
+	background: #fff;
+	padding: 9px;
+	box-shadow: 0 6px 20px -6px rgba(0,0,0,0.4);
+}
+.carousel .carousel-item img {
+	margin: 0 auto;
+}
+.carousel-control-prev, .carousel-control-next {
+	width: 68px;
+	background: none;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 28px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin-top: -15px;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: rgba(0, 0, 0, 0.8);
+	text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+.carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	border: none;
+	border-radius: 50%;
+	margin: 1px 4px;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+}
+.carousel-indicators li.active {
+	background: #555;
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a href="#" class="navbar-brand">Case<b>Study</b></a>  		
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+      <div class="navbar-nav">
+        <a href="home.html" class="nav-item nav-link">Home</a>
+        <a href="#" class="nav-item nav-link">About</a>			
+        <!-- <div class="nav-item dropdown">
+          <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle">Services</a>
+          <div class="dropdown-menu">					
+            <a href="#" class="dropdown-item">Web Design</a>
+            <a href="#" class="dropdown-item">Web Development</a>
+            <a href="#" class="dropdown-item">Graphic Design</a>
+            <a href="#" class="dropdown-item">Digital Marketing</a>
+                  </div>
+              </div> -->
+        <a href="district.html" class="nav-item nav-link ">District</a>
+        <!-- <a href="#" class="nav-item nav-link">Blog</a>  -->
+        <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+     
+    </div>
+  </nav>
+ <div class="container-xl">
+	<div class="row">
+
+
+		<div class="pagination-container" >
+			<div data-page="1" >
+				 
+				  <div class="gallery">
+
+					<div id="tvm">
+					 <h1>THIRUVANANTHAPURAM </h1>
+					   <p>Thiruvananthapuram (or Trivandrum) is the capital of the southern Indian state of Kerala. It's distinguished by its British colonial architecture and many art galleries. It’s also home to Kuthira Malika (or Puthen Malika) Palace, adorned with carved horses and displaying collections related to the Travancore royal family, whose regional capital was here from the 18th–20th centuries.</p>
+						 <img src="img/tvm.jfif.jpg" class=" img-float-end" width="500px" >
+					</div>		 
+					 
+			       </div>
+
+			   </div>
+
+			   <div data-page="2" style="display:none;">
+				  
+
+				  <div id="kolam">
+					<h1>KOLLAM </h1>
+				   <p>Kollam is a city in the state of Kerala, on India's Malabar Coast. It’s known as a trade hub and for its beaches, like lively Kollam and secluded Thirumullavaram. Sardar Vallabhbhai Patel Police Museum has artifacts tracing the history of the police force. Nearby, Ashtamudi Lake is a gateway to the Kerala backwaters, a network of waterways rich with vegetation. The striped 1902 Tangasseri Lighthouse has ocean views. </p>
+					<img src="img/kollam.jpg" class="img-float-end"  width="500px" >
+			   </div>
+			   </div>
+			   <div data-page="3" style="display:none;">
+				  
+
+				  <div id="pathanamthitta">
+						 <h1>PATHANAMTHITTA</h1>
+							<p>Pathanamthitta , is a municipality situated in the Central Travancore region in the state of Kerala, India, spread over an area of 23.50 km2. It is the administrative capital of Pathanamthitta district. The town has a population of 37,538.</p>
+							<img src="img/pathanamthitta.jpg" class="img-fluid" width="500px" >
+					</div>
+			   </div>
+			   <div data-page="4" style="display:none;">
+				  
+
+				  <div id="alappuzh">
+					<h1>ALAPPUZHA</h1>
+				   <p>Alappuzha (or Alleppey) is a city on the Laccadive Sea in the southern Indian state of Kerala. It's best known for houseboat cruises along the rustic Kerala backwaters, a network of tranquil canals and lagoons. Alappuzha Beach is the site of the 19th-century Alappuzha Lighthouse. The city's Mullakkal Temple features a traditional design. Punnamada Lake's snake boat races are a well-known annual event. </p>
+				   <img src="img/alappuza.jfif.jpg" class="img-fluid" width="500px" >
+	              </div>
+
+			   </div>
+			   <div data-page="5" style="display:none;">
+				  
+
+				<div id="kottayam">
+					   <h1>KOTTAYAM</h1>
+						  <p>Kottayam is a municipal town in the Indian state of Kerala. Flanked by the Western Ghats on the east and the Vembanad Lake and paddy fields of Kuttanad on the west. It is the district headquarters of Kottayam district, located in south-west Kerala.</p>
+						  <img src="img/kottayam.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="6" style="display:none;">
+				  
+
+				<div id="idukki">
+					   <h1>IDUKKI</h1>
+						  <p>Idukki district is a densely forested, mountainous region in the south Indian state of Kerala. In the north, Anamudi mountain towers over Eravikulam National Park, where the rare, blue Neelakurinji flower blooms every 12 years. Nearby, Munnar is a hill station known for its sprawling tea plantations and Tea Museum. Farther south is the vast, curved Idukki Dam and Periyar National Park, a tiger and elephant reserve. </p>
+						  <img src="img/Idukki.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="7" style="display:none;">
+				  
+
+				<div id="ernakulam">
+					   <h1>ERNAKULAM</h1>
+						  <p>Sprawling, residential Ernakulam is known for Marine Drive, a busy waterfront promenade where boats offer backwater cruises. The Kerala Folklore and Hill Palace museums explore local heritage through art and antiquities. Shops along Broadway and on MG Road sell fabrics, crafts, and spices, while modern Lulu Mall also has a cinema and an ice rink. Simple eateries serve Keralan specialties and South Indian seafood.</p>
+						  <img src="img/kochi.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="8" style="display:none;">
+				  
+
+				<div id="thrissur">
+					   <h1>THRISSUR</h1>
+						  <p>Thrissur is a city in the south Indian state of Kerala. It's known for sacred sites and colorful festivals. In the center is Vadakkumnathan Temple, dedicated to Lord Shiva and adorned with murals. The ornate, Indo-Gothic Our Lady of Dolours Basilica is nearby. To the north, Thiruvambady Temple is home to several elephants. Sakthan Thampuran Palace houses an archaeology museum with bronze statues and ancient coins.</p>
+						  <img src="img/thrissur.jfif (1).jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="9" style="display:none;">
+				  
+
+				<div id="palakkad">
+					   <h1>PALAKKAD</h1>
+						  <p>Palakkad, or Palghat, is a city in Kerala, a state in southwestern India. The 18th-century Palakkad Fort has sturdy battlements, a moat and a Hanuman temple on its grounds. North, on the Kalpathy River, the 15th-century Viswanatha Swamy Temple is the main venue of the famous Ratholsavam chariot festival. Northeast, near Malampuzha Dam, the town of Malampuzha has a rock garden created from recycled materials. </p>
+						  <img src="img/palakkad.jfif.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="10" style="display:none;">
+				  
+
+				<div id="malappuram">
+					   <h1>MALAPPURAM</h1>
+						  <p>Malappuram is a city in the Indian state of Kerala, spread over an area of 58.20 km² including the surrounding suburban areas. The first municipality in the district formed in 1970, Malappuram serves as the administrative headquarters of Malappuram district.</p>
+						  <img src="img/malappuram.jfif.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="11" style="display:none;">
+				  
+
+				<div id="kozhikode">
+					   <h1>KOZHIKODE</h1>
+						  <p>Kozhikode is a coastal city in the south Indian state of Kerala. It was a significant spice trade center and is close to Kappad Beach, where Portuguese explorer Vasco da Gama landed in 1498. The central Kozhikode Beach, overlooked by an old lighthouse, is a popular spot for watching the sunset. Inland, tree-lined Mananchira Square, with its musical fountain, surrounds the massive Mananchira Tank, an artificial pond. </p>
+						  <img src="img/kozhikode.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="12" style="display:none;">
+				  
+
+				<div id="wayanada">
+					   <h1>WAYANAD</h1>
+						  <p>Wayanad is a rural district in Kerala state, southwest India. In the east, the Wayanad Wildlife Sanctuary is a lush, forested region with areas of high altitude, home to animals including Asiatic elephants, tigers, leopards and egrets. In the Ambukuthi Hills to the south, Edakkal Caves contain ancient petroglyphs, some dating back to the Neolithic age.</p>
+						  <img src="img/wayanad.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="13" style="display:none;">
+				  
+
+				<div id="kannur">
+					   <h1>KANNUR</h1>
+						  <p>Kannur is a coastal city in the south Indian state of Kerala. It was once an ancient trading port. Enduring monuments such as 16th-century St. Angelo Fort, once occupied by European colonial forces, show the city’s significant role in the spice trade. Housed in a former palace, the Arakkal Museum highlights Kerala's one Muslim royal family. The palm-fringed sands of Payyambalam Beach run along Kannur’s western shore. </p>
+						  <img src="img/kannur.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div><div data-page="14" style="display:none;">
+				  
+
+				<div id="kasaragod">
+					   <h1>KASARAGOD</h1>
+						  <p>Kasaragod is a municipal town and administrative headquarters of Kasaragod district in the state of Kerala, India. Established in 1966, Kasaragod was the first municipal town in the district. It is the northernmost district of Kerala and is also known as Saptha Bhasha Sangama Bhoomi.</p>
+						  <img src="img/kasaragod.jpg" class="img-fluid" width="500px" >
+				  </div>
+			 </div>
+			   
+			
+			   <div class="pagination pagination-centered pagination-large" style="position:absolute; bottom:0;">
+				   <ul class="pagination">
+						<li class="page-item" data-page="-" ><a class="page-link" href="#" >&lt;</a></li>
+						<li class="active" data-page="1">
+							<a class="page-link" href="#" >1</a>
+						</li>
+						<li class="page-item" data-page="2"><a class="page-link" href="#" >2</a></li>
+						<li class="page-item" data-page="3"><a class="page-link" href="#" >3</a></li>
+						<li class="page-item" data-page="4"><a class="page-link" href="#" >4</a></li>
+						<li class="page-item" data-page="5"><a class="page-link" href="#" >5</a></li>
+						<li class="page-item" data-page="+"><a class="page-link" href="#" >&gt;</a></li>
+				  </ul>
+			   </div>
+			
+			</div>
+
+
+
+
+
+
+         <!-- code here  -->
+        
+</div>
+</div>
+
+<script>
+var paginationHandler = function(){
+    // store pagination container so we only select it once
+    var $paginationContainer = $(".pagination-container"),
+        $pagination = $paginationContainer.find('.pagination ul');
+
+    // click event
+    $pagination.find("li a").on('click.pageChange',function(e){
+        e.preventDefault();
+
+        // get parent li's data-page attribute and current page
+        var parentLiPage = $(this).parent('li').data("page"),
+            currentPage = parseInt( $(".pagination-container div[data-page]:visible").data('page') ),
+            numPages = $paginationContainer.find("div[data-page]").length;
+        
+        // make sure they aren't clicking the current page
+        if ( parseInt(parentLiPage) !== parseInt(currentPage) ) {
+            // hide the current page
+            $paginationContainer.find("div[data-page]:visible").hide();
+
+            if ( parentLiPage === '+' ) {
+                // next page
+                $paginationContainer.find("div[data-page="+( currentPage+1>numPages ? numPages : currentPage+1 )+"]").show();
+            } else if ( parentLiPage === '-' ) {
+                // previous page
+                $paginationContainer.find("div[data-page="+( currentPage-1<1 ? 1 : currentPage-1 )+"]").show();
+            } else {
+                // specific page
+                $paginationContainer.find("div[data-page="+parseInt(parentLiPage)+"]").show();
+            }
+
+        }
+    });
+};
+$( document ).ready( paginationHandler );
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

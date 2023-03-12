@@ -1,0 +1,14 @@
+/* #tvm{
+
+    padding: 170px 170px 170px 170px;
+    background-color: blue;
+    text-align: center;
+
+} */
+.gallery {
+    margin: 35px;
+    border: 1px solid rgb(233, 59, 59);
+    float: end;
+    width: 500px;
+  }
+
